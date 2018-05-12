@@ -19,8 +19,13 @@ angular.module('video-player')
         youTube.search({query: searchTerm}, (videos) => {
           this.videos = videos;
           this.currentVideo = videos[0];
-        });
-        
+        }); 
+      };
+      this.onClick = (searchTerm) => {
+        youTube.clicksearch({query: searchTerm}, (videos) => {
+          this.videos = videos;
+          this.currentVideo = videos[0];
+        }); 
       };
       
       

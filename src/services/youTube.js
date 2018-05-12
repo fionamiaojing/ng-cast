@@ -1,7 +1,7 @@
 angular.module('video-player')
   .service('youTube', function($http) {
     
-    this.search = _.debounce(function(options, callback) {
+    this.clicksearch = function(options, callback) {
       $http.get('https://www.googleapis.com/youtube/v3/search', 
         {
           params: {
@@ -23,5 +23,7 @@ angular.module('video-player')
           // called asynchronously if an error occurs
           // or server returns response with an error status.
         });
-    }, 500);
+    };
+    
+    this.search = _.debounce(this.clicksearch, 5000);
   });
