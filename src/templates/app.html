@@ -1,12 +1,12 @@
 <div id="app container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
-      <search search-results='$ctrl.searchResults'></search>
+      <search result='$ctrl.searchResults'></search>
     </div>
   </nav>
   <div class="row">
     <div class="col-md-7">
-      <video-player current-video='$ctrl.currentVideo' video-url='$ctrl.videoUrl'></video-player>
+      <video-player video='$ctrl.currentVideo'></video-player>
     </div>
     <div class="col-md-5">
       <video-list videos='$ctrl.videos' on-click='$ctrl.selectVideo'></video-list>

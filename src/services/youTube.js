@@ -13,7 +13,6 @@ angular.module('video-player')
           }
         }
       ).then(function successCallback(response) {
-        console.log(response);
         callback(response.data.items);
       // this callback will be called asynchronously
       // when the response is available

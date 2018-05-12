@@ -2,8 +2,8 @@ angular.module('video-player')
 
   .component('app', {
     controller: function (youTube) {
-      this.videos = exampleVideoData;
-      this.currentVideo = exampleVideoData[0];
+      this.videos = [];
+      this.currentVideo = {};
       this.maxResults = 5;
       this.query = 'cat';
       this.$onInit = () => {
