@@ -7,21 +7,21 @@ angular.module('video-player')
       this.maxResults = 5;
       this.query = 'cat';
       this.$onInit = () => {
-        youTube.search({query:'cat'}, (videos) => {
+        youTube.search({query: 'cat'}, (videos) => {
           this.videos = videos;
           this.currentVideo = videos[0];
-        })
+        });
       };
       this.selectVideo = (video) => {
         this.currentVideo = video;
       };
       this.searchResults = (searchTerm) => {
         //console.log(this);
-        youTube.search({query:searchTerm}, (videos) => {
+        youTube.search({query: searchTerm}, (videos) => {
           this.videos = videos;
           this.currentVideo = videos[0];
-        })
-      }
+        });
+      };
       
       
     },
