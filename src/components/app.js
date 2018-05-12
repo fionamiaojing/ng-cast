@@ -16,11 +16,11 @@ angular.module('video-player')
         this.currentVideo = video;
       };
       this.searchResults = (searchTerm) => {
-        //console.log(this);
         youTube.search({query: searchTerm}, (videos) => {
           this.videos = videos;
           this.currentVideo = videos[0];
         });
+        
       };
       
       
